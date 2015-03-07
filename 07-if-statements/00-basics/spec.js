@@ -39,7 +39,7 @@ describe("checkLock", function() {
     expect(challenge.checkLock(1, 2, 45, 1)).to.eql("incorrect");
   });
 
-  it("should return 'incorrect' for incorect second number", function() {
+  it("should return 'incorrect' for incorrect second number", function() {
     expect(challenge.checkLock(5, 1, 50, 1)).to.eql("incorrect");
     expect(challenge.checkLock(5, 20, 50, 1)).to.eql("incorrect");
   });
