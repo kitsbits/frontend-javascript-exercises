@@ -19,12 +19,14 @@ module.exports.hasElems = function(object, array) {
   //console.log(keys);
   keys.sort();
   array.sort();
-  for (i = 0; i < keys.length; i++) {
-    if (keys[i] !== array[i]) {
-      return false;
+  for (var i in keys) {
+    if (!array[i]) {
+      return true;
     }
-    return true;
+    else if (keys[i] !== array[i]) {
+      return false;
+    } 
+      return true;
   }
-
   
 };
